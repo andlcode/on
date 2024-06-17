@@ -5,23 +5,23 @@
 <head>
 <meta charset="UTF-8">
 <title>FICHA DE INSCRIÇÃO</title>
-<link rel="stylesheet" href="styles-ficha.css">
+<link rel="stylesheet" href="styles/styles-ficha.css">
 
 
 <script>
   function imprimirFicha() {
     var conteudo = document.querySelector('.container').innerHTML;
-    var janelaImprimir = window.open('', '', 'height=600,width=800');
-    janelaImprimir.document.write('<html><head><title>Impressão Ficha de Inscrição</title>');
-    janelaImprimir.document.write('<link rel="stylesheet" href="styles-ficha.css">'); // Caminho absoluto ou completo para o arquivo CSS
-    janelaImprimir.document.write('</head><body>');
-    janelaImprimir.document.write(conteudo);
-    janelaImprimir.document.write('</body></html>');
-    janelaImprimir.document.close();
-    janelaImprimir.print();
+    var janelaAtual = window.document;
+    janelaAtual.write('<html><head><title>Impressão Ficha de Inscrição</title>');
+    janelaAtual.write('<link rel="stylesheet" href="styles/styles-ficha.css">'); // Caminho absoluto ou completo para o arquivo CSS
+    janelaAtual.write('</head><body>');
+    janelaAtual.write(conteudo);
+    janelaAtual.write('</body></html>');
+    janelaAtual.close(); // Fecha a escrita no documento atual
+
+    window.print(); // Abre a janela de impressão
   }
 </script>
-
 </head>
 <body>
 
