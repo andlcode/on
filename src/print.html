@@ -13,7 +13,7 @@
     var conteudo = document.querySelector('.container').innerHTML;
     var janelaImprimir = window.open('', '', 'height=600,width=800');
     janelaImprimir.document.write('<html><head><title>Impressão Ficha de Inscrição</title>');
-    janelaImprimir.document.write('<link rel="stylesheet" href="styles/styles-ficha.css">'); // Incluir o seu arquivo de estilos aqui
+    janelaImprimir.document.write('<link rel="stylesheet" href="/styles/styles-ficha.css">'); // Caminho absoluto ou completo para o arquivo CSS
     janelaImprimir.document.write('</head><body>');
     janelaImprimir.document.write(conteudo);
     janelaImprimir.document.write('</body></html>');
@@ -21,6 +21,7 @@
     janelaImprimir.print();
   }
 </script>
+
 </head>
 <body>
 
