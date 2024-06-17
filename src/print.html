@@ -1,0 +1,195 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>FICHA DE INSCRIÇÃO</title>
+<link rel="stylesheet" href="./styles/styles-ficha.css">
+
+
+<script>
+  function imprimirFicha() {
+    var conteudo = document.querySelector('.container').innerHTML;
+    var janelaImprimir = window.open('', '', 'height=600,width=800');
+    janelaImprimir.document.write('<html><head><title>Impressão Ficha de Inscrição</title>');
+    janelaImprimir.document.write('<link rel="stylesheet" href="./styles/styles-ficha.css">'); // Incluir o seu arquivo de estilos aqui
+    janelaImprimir.document.write('</head><body>');
+    janelaImprimir.document.write(conteudo);
+    janelaImprimir.document.write('</body></html>');
+    janelaImprimir.document.close();
+    janelaImprimir.print();
+  }
+</script>
+</head>
+<body>
+
+
+<div class="container">
+<div class="header">
+        <img src="../image/ceerj.png" alt="Logo da CEERJ">
+        <div>
+        <h1>COMEJACA 2025</h1>
+        <h3>Confraternização das Mocidades Espíritas de Jacarepagua</h3>
+        </div>
+
+    </div>
+  <form>
+  <div class="form-group">
+      <label for="id">ID</label>
+      <input type="text" id="id" disabled name="id" required>
+    </div>
+
+    <div class="form-group">
+      <label for="nome_completo">NOME COMPLETO</label>
+      <input type="text" id="nome_completo" disabled name="nome_completo" required>
+    </div>
+
+    <div class="form-group">
+      <label for="nome_cracha">NOME NO CRACHÁ</label>
+      <input type="text" id="nome_cracha" disabled name="nome_cracha" required>
+    </div>
+
+    <div class="form-group">
+      <label for="data_nascimento">DATA DE NASCIMENTO</label>
+      <input type="text" id="data_nascimento" disabled name="data_nascimento" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">E-MAIL</label>
+      <input type="email" id="email" disabled name="email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="celular">CELULAR</label>
+      <input type="tel" id="celular" disabled name="celular" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sexo">SEXO</label>
+      <input name="sexo" id="sexo" disabled required>
+      </input>
+    </div>
+
+    <div class="form-group">
+      <label for="genero">GÊNERO</label>
+      <input name="genero" disabled id="genero" disabled required>
+      </input>
+    </div>
+
+    <div class="form-group">
+      <label for="tempodeinstituicaoespirita">TEMPO DE CASA ESPÍRITA</label>
+      <input type="number" disabled id="tempodeinstituicaoespirita" name="tempodeinstituicaoespirita" disabled required>
+    </div>
+
+    <div class="form-group">
+      <label for="tipodeparticipacao">TIPO DE PARTICIPAÇÃO</label>
+      <input name="tipodeparticipacao" disabled id="tipodeparticipacao" required>
+    </div>
+
+    <div class="form-group">
+      <label for="comissao">COMISSÃO</label>
+      <input name="comissao" disabled id="comissao" required>     
+    </div>
+
+    <div class="form-group">
+      <label for="CEP">CEP</label>
+      <input type="text" id="CEP" disabled name="cep" required>
+    </div>
+
+    <div class="form-group">
+      <label for="endereco">ENDEREÇO</label>
+      <input type="text" id="endereco" disabled name="endereco" required>
+    </div>
+
+    <div class="form-group">
+      <label for="estado">ESTADO</label>
+      <input type="text" id="estado" disabled name="estado" required>
+    </div>
+
+    <div class="form-group">
+      <label for="cidade">CIDADE</label>
+      <input type="text" id="cidade" disabled name="cidade" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bairro">BAIRRO</label>
+      <input type="text" id="bairro" disabled name="bairro" required>
+    </div>
+
+    <div class="form-group">
+      <label for="numero">NÚMERO</label>
+      <input type="text" id="numero" disabled name="numero" required>
+    </div>
+
+    <div class="form-group">
+      <label for="complemento">COMPLEMENTO</label>
+      <input type="text" id="complemento" disabled name="complemento" required>
+    </div>
+
+    <div class="form-group">
+      <label for="quantidadecomejaca">NUMERO COMEJACA'S</label>
+      <input type="number" id="quantidadecomejaca" disabled name="quantidadecomejaca" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sealergia">ALERGIA</label>
+      <input type="text" id="sealergia" disabled name="sealergia" required>
+    </div>
+
+    <div class="form-group">
+      <label for="sedoenca">DOENÇA CRÔNICA</label>
+      <input type="text" id="sedoenca" disabled name="sedoenca" required>
+    </div>
+
+    <div class="form-group">
+      <label for="semedicacao">MEDICAÇÃO USO ROTINEIRO</label>
+      <input type="text" id="semedicacao" disabled name="semedicacao" required>
+    </div>
+
+    <div class="form-group">
+      <label for="planodesaude">PLANO DE SAÚDE</label>
+      <input type="text" id="planodesaude" disabled name="planodesaude" required>
+    </div>
+
+    <div class="form-group">
+      <label for="planodesaude">INSTITUIÇÃO ESPÍRITA</label>
+      <input type="text" disabled id="planodesaude" name="planodesaude" required>
+    </div>
+
+    <br><br>
+
+
+    
+    <div class="form-group">
+      <label for="assinaturaie">ASSINATURA IE</label>
+      <input type="text" disabled id="assinaturaie" name="assinaturaie" required>
+    </div>
+<br>
+    <div class="form-group">
+      <label for="assinaturaresponsavel">ASSINATURA DO RESPONSÁVEL <br><span style="color:red"> apenas para menores de idade</span> </label>
+      <input type="text" disabled id="assinaturaresponsavel" disabled name="assinaturaresponsavel" required>
+    </div>
+
+    
+    <div class="form-group">
+      <label for="documentoresponsavel">DOCUMENTO DO RESPONSÁVEL <br><span style="color:red"> apenas para menores de idade</span> </label>
+      <input type="text" disabled id="documentoresponsavel" disabled name="documentoresponsavel" required>
+    </div>
+
+    <div class="form-group">
+      <label for="telefoneresponsavel">TELEFONE DO RESPONSÁVEL <br><span style="color:red"> apenas para menores de idade</span> </label>
+      <input type="text" disabled id="telefoneresponsavel" disabled name="telefoneresponsavel" required>
+    </div>
+
+    <br><br><br>
+
+    <textarea name="" style="width: 100%; border: none; font-weight: bold" disabled id="">Prezados(a), sigam nosso instagram @comejaca para receber todas as noticias relacionadas a COMEJACA. 
+</textarea>
+
+<br><br>
+    <button type="button" onclick="imprimirFicha()" >Imprimir Ficha</button>  </form>
+</div>
+
+</body>
+</html>

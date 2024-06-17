@@ -1,0 +1,63 @@
+   /* Estilizando o corpo do datepicker */
+   .datepicker {
+    font-size: 14px;
+    width: 220px;
+    border-radius: 5px;
+}
+
+/* Estilizando a tabela do datepicker */
+.datepicker table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Estilizando o cabeçalho da tabela do datepicker */
+.datepicker table thead th {
+    border-bottom: none;
+}
+
+/* Estilizando os dias da semana no datepicker */
+.datepicker table thead tr:first-child th {
+    color: #333;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Estilizando os dias no datepicker */
+.datepicker table tbody td {
+    text-align: center;
+    padding: 10px 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilizando os dias selecionados no datepicker */
+.datepicker table tbody td.active,
+.datepicker table tbody td.active:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+}
+
+/* Estilizando o mês e o ano no datepicker */
+.datepicker table thead .datepicker-switch {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Estilizando os botões de navegação no datepicker */
+.datepicker table thead .prev,
+.datepicker table thead .next {
+    font-size: 18px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Estilizando o botão de "hoje" no datepicker */
+.datepicker table tfoot .today {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px;
+}
+</style>

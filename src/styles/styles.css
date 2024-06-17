@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Playwrite+FR+Moderne:wght@100..400&display=swap');
+
+/* Estilos gerais */
+body {
+    font-family: "Lato", sans-serif;
+    background-color: #086375;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-size: 1.2rem;
+    min-height: 100vh
+}
+
+#titulo {
+font-family: "Playwrite FR Moderne", cursive, sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-size: 2rem
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label,
+input,
+button,
+select {
+    display: block;
+    margin-bottom: 2px;
+    
+    
+}
+
+main{
+    flex: 1;
+    overflow-y: auto; /* Adiciona barra de rolagem vertical apenas se necessário */
+    padding-bottom: 99px; /* Espaço para o rodapé */
+
+}
+
+/* Estilos para inputs */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus {
+    outline: none;
+    border-color: #3498db; /* Cor quando focado */
+}
+
+
+
+/* Estilizar botão */
+button {
+    background-color: #37FF8B; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #37FF8B; /* Cor de fundo no hover */
+}
+select {
+    width:600px
+}
+
+button {
+    background-color: #1DD3B0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+/* Ajustes para dispositivos móveis */
+@media only screen and (max-width: 600px) {
+    form {
+        padding: 15px;
+    }
+
+    input[type="date"] {
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+}
+
+
+
+
+
+
+.container {
+    text-align: center;
+}
+
+
+@keyframes digitar {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    justify-content:center;
+
+}
+
+p {
+    margin-top: 0
+}

@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 0.7rem;
+  }
+  .header {
+    padding: 15px; /* Adiciona espaço interno ao redor da logo (opcional) */
+    z-index: 1000; /* Garante que a logo esteja acima de outros elementos, se necessário */
+    background-color: white; /* Cor de fundo do contêiner (opcional) */
+    display:grid;
+    grid-template-columns: 1fr 4fr;
+
+}button {
+  background: #0496FF
+}
+h1 {
+    text-align:center;
+    font-size: 2rem;
+    margin-bottom: 0;
+    margin-top: 0;
+
+}
+
+h3 {
+  text-align:center;
+  margin-top: 0;
+  font-size: 1rem;
+}
+form {
+    margin-top:25px
+}
+.header img {
+    width: 120px; /* Define a largura da logo (ajuste conforme necessário) */
+    height: auto; /* Mantém a proporção da altura conforme a largura */
+}
+
+  .container {
+    width: 21cm;
+    min-height: 29.7cm;
+    padding: 2cm;
+    margin: 1cm auto;
+    border: 1px #d3d3d3 solid;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  label {
+    font-weight: bold;
+    display: inline-block;
+    width: 30%;
+    margin-bottom: 1px;
+  }
+  input, select {
+    width: 65%;
+    padding: 8px;
+    border: none; /* Removendo a borda */
+    border-radius: 0; /* Removendo o arredondamento dos cantos */
+    border-bottom: 1px solid #ccc; /* Adicionando apenas uma borda na parte inferior */
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle; /* Alinhando verticalmente com o label */
+    height: 15px;
+  }
+  select {
+    height: 15px;
+  }
+  .form-group {
+    margin-bottom: 2px;
+  }
+  .form-group::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+
+
+  @media print {
+    body, html {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: white;
+      box-shadow: none;
+    }
+    button {
+      display: none; /* Certificando-se de que o botão não será impresso */
+    }
+  }
