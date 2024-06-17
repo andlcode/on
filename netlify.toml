@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build"  # Comando para construir seu projeto (se aplicável)
+  publish = "src"            # Pasta onde os arquivos de build estão localizados
+
+[dev]
+  command = "npm run start"  # Comando para iniciar o ambiente de desenvolvimento (opcional)
