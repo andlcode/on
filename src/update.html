@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição COMEJACA [ANO]</title>
+
+
+<!-- CSS do bootstrap-datepicker -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/datepicker.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+
+    
+
+
+</head>
+<body>
+<header>
+<div class="container">
+    <div class="texto-centralizado">
+        <h1 id="titulo"></h1>
+    </div>
+</div>
+
+
+</header>
+<main>
+<form action="processar_formulario.php" method="post">
+    <label for="nome_completo">Nome completo</label></label>
+    <input type="text" id="nome_completo" name="nome_completo" required>
+
+    <label for="nome_cracha">Nome no crachá</label>
+    <input type="text" id="nome_cracha" name="nome_cracha" required>
+
+    <label for="data_nascimento">Data de nascimento</label>
+
+
+    <div class="container">
+        <input type="text" id="datepicker">
+    </div>
+    <label for="sexo">Sexo</label>
+    <select name="sexo" id="sexo">
+    <option value="">Selecionar</option>
+    <option value="M">Masculino</option>
+    <option value="F">Feminino</option>
+
+    </select>
+
+    <label for="genero">Gênero</label>
+    <select name="genero" id="genero">
+    <option value="">Selecionar</option>
+    <option value="Cisgenero">Cisgenero - pessoas que se identificam com o gênero que lhe foi atribuido ao nascer.</option>
+    <option value="Transgenero">Transgenero - pessoas que se identificam com gênero diferente do qual lhe foi atribuido ao nascer.</option>
+    <option value="Transgenero">Prefiro não informar</option>
+
+    </select>
+
+
+    <label for="email">E-mail</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="celular">Celular</label></label>
+    <input type="tel" id="celular" name="celular" required>
+
+    
+    <label for="tempodeinstituicaoespirita">Tempo de doutrina espírita</label>
+    <input type="number" id="tempodeinstituicaoespirita" name="tempodeinstituicaoespirita" min="0" required>
+
+    <label for="instituicaoespirita">Instituição Espírita</label>
+    <input required list="datalist" type="text" name="instituicaoespirita" id="instituicaoespirita" >
+                <datalist id="datalist">
+                    <option>Instituição Espirita</option>
+                </datalist>
+
+                
+
+    <label for="tipodeparticipacao">Tipo de participação</label>
+    <select name="tipodeparticipacao" id="tipodeparticipacao">
+    <option value="">Selecionar</option>
+    <option value="Trabalhador">Trabalhador</option>
+    <option value="Confraternista">Confraternista</option>
+
+    </select>
+
+    <label for="comissao">Comissão</label>
+    <select name="comissao" id="comissao">
+    <option value="">Selecionar</option>
+    <option value="Estudos Doutrinários">Estudos Doutrinários</option>
+    <option value="Recepção">Recepçãor</option>
+    <option value="Multimeios">Multimeios</option>
+    <option value="Alimentação">Alimentação</option>
+    <option value="Serviços Gerais">Serviços Gerais</option>
+    <option value="Coordenação Geral">Coordenação Geral</option>
+
+
+    </select>
+    
+    <label for="CEP">CEP</label></label>
+    <input type="text" id="CEP" name="cep" required>
+
+    <label for="endereco">Endereço</label></label>
+    <input type="text" id="endereco" disabled name="endereco" required>
+
+    <label for="estado">Estado</label></label>
+    <input type="text" id="estado" disabled name="estado" required>
+
+    <label for="cidade">Cidade</label></label>
+    <input type="text" id="cidade" disabled name="cidade" required>
+
+    <label for="bairro">Bairro</label></label>
+    <input type="text" id="bairro" disabled name="bairro" required>
+
+    <label for="numero">Número</label></label>
+    <input type="text" id="numero" name="numero" required>
+
+    <label for="complemento">Complemento</label>
+    <input type="text" id="complemento" name="complemento" required>
+    
+    <label for="quantidadecomejaca">Quantas COMEJACA's você particiou?</label>
+    <input type="number" id="quantidadecomejaca" name="quantidadecomejaca" min="0">
+
+    <label for="sealergia">Possui alergia?</label>
+    <input type="text" id="sealergia" name="sealergia" required>
+
+    <label for="sedoenca">Possui doênça crônica?</label>
+    <input type="text" id="sedoenca" name="sedoenca" required>
+
+    <label for="semedicacao">Faz uso de medicação de uso rotineiro?</label>
+    <input type="text" id="semedicacao" name="semedicacao" required>
+
+    <label for="planodesaude">Possui plano de saúde?</label>
+    <input type="text" id="planodesaude" name="planodesaude" required>
+    
+  
+   
+    <button type="submit">Inscrever</button>
+</form>
+</main>
+<footer>
+        <!-- Aqui vai o rodapé da sua página -->
+        <p>COMEJACA - 2025</p>
+    </footer>
+
+<!-- Scripts do Bootstrap e jQuery (necessário) -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<!-- Script do bootstrap-datepicker -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="./scripts/scripts.js"></script>
+<script src="./scripts/datepicker.js"></script>
+<script defer src="./scripts/instituicoes_espiritas.js"></script>
+
+</body>
+</html>
