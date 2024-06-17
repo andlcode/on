@@ -10,18 +10,29 @@
 
 <script>
   function imprimirFicha() {
-    var conteudo = document.querySelector('.container').innerHTML;
-    var janelaAtual = window.document;
-    janelaAtual.write('<html><head><title>Impressão Ficha de Inscrição</title>');
-    janelaAtual.write('<link rel="stylesheet" href="styles/styles-ficha.css">'); // Caminho absoluto ou completo para o arquivo CSS
-    janelaAtual.write('</head><body>');
-    janelaAtual.write(conteudo);
-    janelaAtual.write('</body></html>');
-    janelaAtual.close(); // Fecha a escrita no documento atual
+    var conteudoOriginal = document.body.innerHTML; // Salva o conteúdo original da página
 
-    window.print(); // Abre a janela de impressão
+    // Cria um elemento temporário para construir o conteúdo da página de impressão
+    var elementoImpressao = document.createElement('div');
+    elementoImpressao.innerHTML = '<html><head><title>Impressão Ficha de Inscrição</title>' +
+                                  '<link rel="stylesheet" href="styles/styles-ficha.css">' + // Caminho absoluto ou completo para o arquivo CSS
+                                  '</head><body>' + conteudoOriginal + '</body></html>';
+
+    // Estilos para ajustar a aparência da página de impressão
+    var styles = '<style>body { font-family: Arial, sans-serif; }</style>';
+    elementoImpressao.querySelector('head').insertAdjacentHTML('beforeend', styles);
+
+    // Adiciona o elemento temporário à página
+    document.body.appendChild(elementoImpressao);
+
+    // Abre a janela de impressão
+    window.print();
+
+    // Remove o elemento temporário após a impressão
+    document.body.removeChild(elementoImpressao);
   }
 </script>
+
 </head>
 <body>
 
