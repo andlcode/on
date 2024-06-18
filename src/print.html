@@ -8,30 +8,6 @@
 <link rel="stylesheet" href="styles/styles-ficha.css">
 
 
-<script>
-  function imprimirFicha() {
-    var conteudoOriginal = document.body.innerHTML; // Salva o conteúdo original da página
-
-    // Cria um elemento temporário para construir o conteúdo da página de impressão
-    var elementoImpressao = document.createElement('div');
-    elementoImpressao.innerHTML = '<html><head><title>Impressão Ficha de Inscrição</title>' +
-                                  '<link rel="stylesheet" href="styles/styles-ficha.css">' + // Caminho absoluto ou completo para o arquivo CSS
-                                  '</head><body>' + conteudoOriginal + '</body></html>';
-
-    // Estilos para ajustar a aparência da página de impressão
-    var styles = '<style>body { font-family: Arial, sans-serif; }</style>';
-    elementoImpressao.querySelector('head').insertAdjacentHTML('beforeend', styles);
-
-    // Adiciona o elemento temporário à página
-    document.body.appendChild(elementoImpressao);
-
-    // Abre a janela de impressão
-    window.print();
-
-    // Remove o elemento temporário após a impressão
-    document.body.removeChild(elementoImpressao);
-  }
-</script>
 
 </head>
 <body>
@@ -196,12 +172,17 @@
 
     <br><br><br>
 
-    <textarea name="" style="width: 100%; border: none; font-weight: bold" disabled id="">Prezados(a), sigam nosso instagram @comejaca para receber todas as noticias relacionadas a COMEJACA. 
+    <textarea style="width: 100%; border: none; font-weight: bold" disabled="" id="">
+      Prezados(a), sigam o instagram @comejaca para receber todas as noticias relacionadas a COMEJACA. 
 </textarea>
 
 <br><br>
-    <button type="button" onclick="imprimirFicha()" >Imprimir Ficha</button>  </form>
+
 </div>
 
+  
+
 </body>
+
+
 </html>

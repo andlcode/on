@@ -6,8 +6,6 @@
     <title>Inscrição COMEJACA [ANO]</title>
 
 
-<!-- CSS do bootstrap-datepicker -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="./styles/datepicker.css">
     <link rel="stylesheet" href="./styles/styles.css">
@@ -29,6 +27,7 @@
 </header>
 <main>
 <form action="processar_formulario.php" method="post">
+    <h2>DADOS PESSOAIS</h2>
     <label for="nome_completo">Nome completo</label></label>
     <input type="text" id="nome_completo" name="nome_completo" required>
 
@@ -57,55 +56,26 @@
     <option value="Transgenero">Prefiro não informar</option>
 
     </select>
+    <h2>CONTATO</h2>
 
 
     <label for="email">E-mail</label>
     <input type="email" id="email" name="email" required>
 
     <label for="celular">Celular</label></label>
-    <input type="tel" id="celular" name="celular" required>
+    <input type="tel" id="celular" onkeypress="mask(this, telephone)" onblur="mask(this, telephone)" name="celular" required>
 
-    
-    <label for="tempodeinstituicaoespirita">Tempo de doutrina espírita</label>
-    <input type="number" id="tempodeinstituicaoespirita" name="tempodeinstituicaoespirita" min="0" required>
+    <h2>ENDEREÇO</h2>
 
-    <label for="instituicaoespirita">Instituição Espírita</label>
-    <input required list="datalist" type="text" name="instituicaoespirita" id="instituicaoespirita" >
-                <datalist id="datalist">
-                    <option>Instituição Espirita</option>
-                </datalist>
-
-                
-
-    <label for="tipodeparticipacao">Tipo de participação</label>
-    <select name="tipodeparticipacao" id="tipodeparticipacao">
-    <option value="">Selecionar</option>
-    <option value="Trabalhador">Trabalhador</option>
-    <option value="Confraternista">Confraternista</option>
-
-    </select>
-
-    <label for="comissao">Comissão</label>
-    <select name="comissao" id="comissao">
-    <option value="">Selecionar</option>
-    <option value="Estudos Doutrinários">Estudos Doutrinários</option>
-    <option value="Recepção">Recepçãor</option>
-    <option value="Multimeios">Multimeios</option>
-    <option value="Alimentação">Alimentação</option>
-    <option value="Serviços Gerais">Serviços Gerais</option>
-    <option value="Coordenação Geral">Coordenação Geral</option>
-
-
-    </select>
     
     <label for="CEP">CEP</label></label>
-    <input type="text" id="CEP" name="cep" required>
+    <input type="text" id="cep" name="cep" required>
 
     <label for="endereco">Endereço</label></label>
-    <input type="text" id="endereco" disabled name="endereco" required>
+    <input type="text" name="endereco" id="endereco"  disabled required>
 
     <label for="estado">Estado</label></label>
-    <input type="text" id="estado" disabled name="estado" required>
+    <input type="text" name="estado" id="estado"  disabled required>
 
     <label for="cidade">Cidade</label></label>
     <input type="text" id="cidade" disabled name="cidade" required>
@@ -119,6 +89,29 @@
     <label for="complemento">Complemento</label>
     <input type="text" id="complemento" name="complemento" required>
     
+    <h2>DADOS PARA O EVENTO</h2>
+
+
+    <label for="tipodeparticipacao">Tipo de participação</label>
+    <select onchange="removerDisabledComissao(this.value)" required name="tipo_participacao" >
+    <option value="">Selecionar</option>
+    <option value="Trabalhador">Trabalhador</option>
+    <option value="Confraternista">Confraternista</option>
+
+    </select>
+
+    <label for="comissao" >Comissão</label>
+    <select name="comissao"  id="isComissao" disabled>
+    <option value="">Selecionar</option>
+    <option value="Estudos Doutrinários">Estudos Doutrinários</option>
+    <option value="Recepção">Recepçãor</option>
+    <option value="Multimeios">Multimeios</option>
+    <option value="Alimentação">Alimentação</option>
+    <option value="Serviços Gerais">Serviços Gerais</option>
+    <option value="Coordenação Geral">Coordenação Geral</option>
+
+
+    </select>
     <label for="quantidadecomejaca">Quantas COMEJACA's você particiou?</label>
     <input type="number" id="quantidadecomejaca" name="quantidadecomejaca" min="0">
 
@@ -133,6 +126,19 @@
 
     <label for="planodesaude">Possui plano de saúde?</label>
     <input type="text" id="planodesaude" name="planodesaude" required>
+
+    
+    <label for="tempodeinstituicaoespirita">Tempo de doutrina espírita</label>
+    <input type="number" id="tempodeinstituicaoespirita" name="tempodeinstituicaoespirita" min="0" required>
+
+    <label for="instituicaoespirita">Instituição Espírita</label>
+    <input required list="datalist" type="text" name="instituicaoespirita" id="instituicaoespirita" >
+                <datalist id="datalist">
+                    <option>Instituição Espírita</option>
+                </datalist>
+
+                
+
     
   
    
@@ -149,10 +155,12 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 <!-- Script do bootstrap-datepicker -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
 <script src="./scripts/scripts.js"></script>
 <script src="./scripts/datepicker.js"></script>
+<script src="./scripts/viacep.js"></script>
 <script defer src="./scripts/instituicoes_espiritas.js"></script>
+<script src="./scripts/phone.js"></script>
+<script src="./scripts/condicionais.js"></script>
 
 </body>
 </html>
